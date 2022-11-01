@@ -65,9 +65,9 @@ for(i in 1:20){
   DD$lng[i] <- DD.add$results[[i]]$geometry$location$lng
 }
 
-for(i in 21:40){
-  DD$lat[i] <- DD.add2$results[[i]]$geometry$location$lat
-  DD$lng[i] <- DD.add2$results[[i]]$geometry$location$lng
+for(i in 1:20){
+  DD$lat[i+20] <- DD.add2$results[[i]]$geometry$location$lat
+  DD$lng[i+20] <- DD.add2$results[[i]]$geometry$location$lng
 }
 
 
