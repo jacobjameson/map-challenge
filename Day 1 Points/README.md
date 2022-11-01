@@ -1,1 +1,1 @@
-![#30DayMapChallenge](RPlot.png)
+![#30DayMapChallenge](Rplot.png)
