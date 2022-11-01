@@ -56,12 +56,18 @@ getbb("Cambridge MA")
 
 # Use the Google API to find Dunkin' Locations
 DD.add <- fromJSON(file ="https://maps.googleapis.com/maps/api/place/textsearch/json?query=dunkin'+cambridge/@42.3724169,-71.126531,&radius=20000&region=us&key=AIzaSyA0ChnU51nagO1DjSXrn8LLzmli3gkfHHY")
+DD.add2 <- fromJSON(file ="https://maps.googleapis.com/maps/api/place/textsearch/json?query=Dunkin'+cambridge/@42.397825,-71.1480632,&radius=200000&region=us&key=AIzaSyA0ChnU51nagO1DjSXrn8LLzmli3gkfHHY")
 
-DD <- data.frame(lat = rep(NA, 20), lng = rep(NA, 20))
+DD <- data.frame(lat = rep(NA, 40), lng = rep(NA, 40))
 
 for(i in 1:20){
   DD$lat[i] <- DD.add$results[[i]]$geometry$location$lat
   DD$lng[i] <- DD.add$results[[i]]$geometry$location$lng
+}
+
+for(i in 21:40){
+  DD$lat[i] <- DD.add2$results[[i]]$geometry$location$lat
+  DD$lng[i] <- DD.add2$results[[i]]$geometry$location$lng
 }
 
 
