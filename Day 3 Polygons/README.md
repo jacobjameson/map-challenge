@@ -1,4 +1,4 @@
-![#30DayMapChallenge](Rplot.png)
+![#30DayMapChallenge](rplot.png)
 
 
 ### References
